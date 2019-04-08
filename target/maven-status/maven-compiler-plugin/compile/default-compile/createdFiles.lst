@@ -1,0 +1,5 @@
+com/rest/h2/Init/DataInit.class
+com/rest/h2/controller/PersonController.class
+com/rest/h2/H2Application.class
+com/rest/h2/entity/Person.class
+com/rest/h2/dao/PersonDao.class
