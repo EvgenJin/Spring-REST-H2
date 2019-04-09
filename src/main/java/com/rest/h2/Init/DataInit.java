@@ -54,12 +54,12 @@ public class DataInit implements ApplicationRunner {
             personDAO.save(p2);
 
             Order o1 = new Order();
-            o1.setPerson_id(1);
+//            o1.setPerson_id(1);
             o1.setTitle("item1");
             o1.setPrice(15);
 
             Order o2 = new Order();
-            o2.setPerson_id(1);
+//            o2.setPerson_id(1);
             o2.setTitle("item2");
             o2.setPrice(19);
 

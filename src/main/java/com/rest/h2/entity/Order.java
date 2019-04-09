@@ -7,21 +7,21 @@ import javax.persistence.*;
 @Table(name = "ORDERS")
 
 public class Order implements Serializable {
-    
+
     @Id
     @GeneratedValue
     @Column(name = "Id", nullable = false)
     private Integer id;
-    
+
+    @Column(name = "person_id", nullable = false)
+    private Integer person_id;
+
+
     @Column(name = "Title" , length = 255)
     private String title;
 
     @Column(name = "price", length = 64)
     private Integer price;
-
-    @JoinColumn(name = "Person", referencedColumnName = "ID")
-    @ManyToOne
-    private Person person;
 
     public Integer getId() {
         return id;
@@ -42,13 +42,4 @@ public class Order implements Serializable {
     public Integer getPrice() {return price;}
 
     public void setPrice(Integer price) {this.price = price;}
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
 }
