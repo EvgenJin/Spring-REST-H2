@@ -25,9 +25,6 @@ public class Person implements Serializable {
     @Column(name = "Date_Of_Birth", nullable = false)
     private Date dateOfBirth;
 
-    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
-    private Set<Order> order;
- 
     public Integer getId() {
         return id;
     }
