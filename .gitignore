@@ -23,7 +23,7 @@
 hs_err_pid*
 <<<<<<< HEAD
 target/classes/.netbeans_automatic_build
-target/
+target/maven-status/
 =======
 target/
 >>>>>>> 0697c6bfdea1040bdeb6e5cb1893b459f653fc63

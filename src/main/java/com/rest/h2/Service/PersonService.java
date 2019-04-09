@@ -23,10 +23,13 @@ public class PersonService {
     public Person addPerson (Person person) {
         return this.personDao.save(person);
     }
-    public Person updateUser(Person person) {
+    public Person updatePerson(Person person) {
         return this.personDao.save(person);
     }
-    public void deleteUserById(int id) {
+    public void deletePersonById(int id) {
         this.personDao.deleteById(id);
+    }
+    public List<Person> getQuerry(int id) {
+        return this.personDao.findAllQuerry(id);
     }    
 }
