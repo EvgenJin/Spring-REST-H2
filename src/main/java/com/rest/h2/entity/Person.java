@@ -1,16 +1,11 @@
 package com.rest.h2.entity;
 import java.io.Serializable;
 import java.util.Date;
- 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import java.util.Set;
 
- 
+import javax.persistence.*;
+
+
 @Entity
 @Table(name = "PERSON")
 //    @NamedQueries({
@@ -22,13 +17,16 @@ public class Person implements Serializable {
     @GeneratedValue
     @Column(name = "Id", nullable = false)
     private Integer id;
- 
+
     @Column(name = "Full_Name", length = 64, nullable = false)
     private String fullName;
  
     @Temporal(TemporalType.DATE)
     @Column(name = "Date_Of_Birth", nullable = false)
     private Date dateOfBirth;
+
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
+    private Set<Order> order;
  
     public Integer getId() {
         return id;
@@ -53,5 +51,5 @@ public class Person implements Serializable {
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
- 
+
 }
