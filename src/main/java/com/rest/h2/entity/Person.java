@@ -6,7 +6,8 @@ import java.util.Set;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
-
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "PERSON")
@@ -18,43 +19,20 @@ public class Person implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "Id", nullable = false)
+    @Getter @Setter
     private Integer id;
-    
 
     @Column(name = "Full_Name", length = 64, nullable = false)
+    @Getter @Setter
     private String fullName;
  
     @Temporal(TemporalType.DATE)
     @Column(name = "Date_Of_Birth", nullable = false)
+    @Getter @Setter
     private Date dateOfBirth;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
     private List<Order> orderList;
-
-    public Integer getId() {
-        return id;
-    }
- 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    
- 
-    public String getFullName() {
-        return fullName;
-    }
- 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
- 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
- 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
 
     @XmlTransient
     public List<Order> getOrderList() {
