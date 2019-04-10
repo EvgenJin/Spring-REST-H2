@@ -19,6 +19,7 @@ public class Person implements Serializable {
     @GeneratedValue
     @Column(name = "Id", nullable = false)
     private Integer id;
+    
 
     @Column(name = "Full_Name", length = 64, nullable = false)
     private String fullName;

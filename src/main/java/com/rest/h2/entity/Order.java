@@ -11,6 +11,7 @@ public class Order implements Serializable {
     @GeneratedValue
     @Column(name = "Id", nullable = false)
     private Integer id;
+    
 
     @Column(name = "Title" , length = 255)
     private String title;
