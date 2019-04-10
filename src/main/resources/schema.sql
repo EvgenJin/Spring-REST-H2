@@ -6,8 +6,8 @@ create table PERSON
    primary key(id)
 );
 
-insert into PERSON (Full_Name,Date_Of_Birth) VALUES  ('John','2018-01-01');
-insert into PERSON (Full_Name,Date_Of_Birth) VALUES  ('Doe','2018-01-01');
+ insert into PERSON (Full_Name,Date_Of_Birth) VALUES  ('John','2018-01-01');
+ insert into PERSON (Full_Name,Date_Of_Birth) VALUES  ('Doe','2018-01-01');
 
 CREATE table ORDERS
 (
@@ -18,7 +18,7 @@ CREATE table ORDERS
  primary key(id)
 );
 
-insert into ORDERS (Title, price, person_id) VALUES ('LALA',99,1);
-insert into ORDERS (Title, price, person_id) VALUES ('LALA-BLA!',100,1);
-insert into ORDERS (Title, price, person_id) VALUES ('LALA-LAND',101,2);
+ insert into ORDERS (Title, price, person_id) VALUES ('LALA',99,1);
+ insert into ORDERS (Title, price, person_id) VALUES ('LALA-BLA!',100,1);
+ insert into ORDERS (Title, price, person_id) VALUES ('LALA-LAND',101,2);
 

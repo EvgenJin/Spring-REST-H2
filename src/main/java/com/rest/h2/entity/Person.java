@@ -17,7 +17,7 @@ import lombok.Setter;
 public class Person implements Serializable {
  
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "Id", nullable = false)
     @Getter @Setter
     private Integer id;

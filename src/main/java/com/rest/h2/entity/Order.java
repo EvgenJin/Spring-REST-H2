@@ -11,7 +11,7 @@ import lombok.Setter;
 public class Order implements Serializable {
     
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "Id", nullable = false)
     private Integer id;
 
