@@ -1,9 +1,11 @@
 package com.rest.h2.entity;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
 
 
 @Entity
@@ -24,6 +26,9 @@ public class Person implements Serializable {
     @Temporal(TemporalType.DATE)
     @Column(name = "Date_Of_Birth", nullable = false)
     private Date dateOfBirth;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
+    private List<Order> orderList;
 
     public Integer getId() {
         return id;
@@ -49,4 +54,12 @@ public class Person implements Serializable {
         this.dateOfBirth = dateOfBirth;
     }
 
+    @XmlTransient
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
+    }
 }
