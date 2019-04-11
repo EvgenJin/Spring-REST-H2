@@ -38,7 +38,7 @@ public class PersonController {
     public Person add(@RequestBody Person person) {
         return this.personService.addPerson(person);
     }
-// update      
+// update
     @RequestMapping(value = "/update", method = RequestMethod.PUT,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Person update(@RequestBody Person person) {
