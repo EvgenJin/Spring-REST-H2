@@ -1,2 +1,2 @@
 # SpringBoot REST API Service 
-## H2 im-memory database
+## Simple REST Service by Spring & H2 im-memory database
